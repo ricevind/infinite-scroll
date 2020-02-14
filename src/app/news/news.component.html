@@ -1,14 +1,14 @@
-<span [style]="{ position: 'fixed', top: 0, right: '40px' }">
+<span  [ngStyle]="{ position: 'fixed', top: 0, right: '40px' }">
     scrolled : {{ scrolled }}</span
 >
-<span [style]="{ position: 'fixed', top: '30px', right: '40px' }">
+<span [ngStyle]="{ position: 'fixed', top: '30px', right: '40px' }">
     total : {{ (stories$ | async).length }}</span
 >
 
 <cdk-virtual-scroll-viewport
     [itemSize]="152"
     (scrolledIndexChange)="onScroll($event)"
-    [style]="{
+    [ngStyle]="{
         display: 'flex',
         flexFlow: 'column nowrap',
         justifyContent: 'center',
@@ -22,10 +22,10 @@
         <mat-card
             [style.height.px]="100"
             [style.width.px]="200"
-            [style]="{ marginTop: '20px' }"
+            [ngStyle]="{ marginTop: '20px' }"
         >
             <mat-card-header
-                [style]="{
+                [ngStyle]="{
                     overflow: 'hidden',
                     whiteSpace: 'nowrap',
                     textOverflow: 'ellipsis'
@@ -49,7 +49,7 @@
     <mat-card
         [style.height.px]="100"
         [style.width.px]="200"
-        [style]="{ marginTop: '20px' }"
+        [ngStyle]="{ marginTop: '20px' }"
     >
         <mat-spinner></mat-spinner> </mat-card
 ></ng-template>
